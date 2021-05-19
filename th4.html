@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành 4</title>
+</head>
+<body>
+<script>
+    let max = 0;
+    let a = [-3, 5, 1, 3, 2, 10] ;
+    let dem = 0 ;
+    for ( let i = 0 ; i < a.length ; i++) {
+        if (max < a[i]) {
+            max = a[i] ;
+            dem = i ;
+        }
+
+    }
+    for ( i = 0 ; i < a.length ; i++) {
+        if ( max == a[i]) {
+            document.write('Giá trị lớn nhất là : ' + max + '<br>');
+            document.write('Giá trị lớn nhất nằm ở vị trí là : ' + dem + '<br>') ;
+        }
+    }
+</script>
+</body>
+</html>

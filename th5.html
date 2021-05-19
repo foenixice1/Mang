@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cờ Caro</title>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+<h1>Solo không ?</h1>
+<p id="caro"/>
+<input type="button" value="Change" onclick="doi()"/>
+<body>
+<script>
+  let b = document.getElementById("caro") ;
+  let board = [] ;
+  let data = "" ;
+  for ( let i = 0 ; i < 10 ; i++) {
+    board[i] = new Array (0,0,0,0,0,0,0,0,0,0);
+  }
+  for ( let i = 0 ; i < 10 ; i++) {
+    data += '<br/>';
+    for ( let j = 0 ; j < 10 ; j++) {
+      data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;" ;
+    }
+  }
+  data += "<br/><br/><input type='button' value='Change' onclick='doi()'>"
+  b.innerHTML = data;
+  function doi() {
+    let positionX = prompt("You: ");
+    let positionY = prompt("Me: ");
+    data = "";
+    board[positionX][positionY] = "x";
+    for (let i = 0; i < 10; i++) {
+      data += "<br/>";
+      for (let j = 0; j < 10; j++) {
+        data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+      }
+    }
+    data += "<br/><br/><input type='button' value='Change' onclick='doi()'>"
+    b.innerHTML = "<hr/>" + data;
+  }
+</script>
+
+
+</script>
+</body>
+</html>

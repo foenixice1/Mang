@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành 2</title>
+</head>
+<body>
+<h1 id="kq" ></h1>
+<script>
+    let a = [-3, 5, 1, 3, 2, 10] ;
+    let dau = 0 ;
+    let cuoi = a.length  - 1 ;
+    while ( dau < cuoi) {
+        let b = a[dau] ;
+        a[dau] = a[cuoi] ;
+        a[cuoi] = b;
+        dau++;
+        cuoi--;
+
+    }
+    document.getElementById("kq").innerHTML ='[' +  a  + ']' ;
+
+</script>
+</body>
+</html>

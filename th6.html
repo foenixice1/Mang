@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thưc hành6</title>
+</head>
+<body>
+<!--<script>-->
+<!--  let myColor = ["Red", "Green", "White", "Black"];-->
+<!--  document.write(myColor.toString() + '<br>');-->
+<!--  document.write(myColor.join());-->
+<!--</script>-->
+<!--<hr>-->
+<!--<script>-->
+<!--    let num = prompt('Nhập dãy số ') ;-->
+<!--    let str = num.toString() ;-->
+<!--    let re = [str[0]] ;-->
+<!--    for ( let i = 1 ; i < str.length ; i++) {-->
+<!--        if ((str[i-1]%2 === 0)&&(str[i]%2 === 0))-->
+<!--        {-->
+<!--            re.push('-', str[i]);-->
+<!--        }-->
+<!--        else-->
+<!--        {-->
+<!--            re.push(str[i]);-->
+<!--        }-->
+<!--    }-->
+<!--   document.write(re.join(''));-->
+
+<!--</script>-->
+<hr>
+<script>
+    var str = prompt("Nhập vào .");
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    const result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.includes(str[x]))
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.includes(str[x]))
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+
+</body>
+</html>

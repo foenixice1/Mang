@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<h2>ENG : hello , goodbye , welcome, dog , cat , love</h2>
+<input type="text" id="nhap" >
+<button onclick="dich()">Translate</button>
+<p id="kq"></p>
+<script>
+  let kq = document.getElementById("kq") ;
+  function dich() {
+    let nhap = document.getElementById("nhap").value ;
+    let eng = ["hello" , "goodbye" , "welcome" , "dog" , "cat" , "love"];
+    let vn = ["Xin chào" , "Tạm biệt" , "Chào mừng" , "chó" , "mèo" , "Tôi yêu bạn"];
+    for ( let i = 0 ; i < eng.length ; i++) {
+      if ( nhap == eng[i]) {
+        kq.innerHTML= 'Tiếng việt là : ' + vn[i] ;
+        break;
+      } else {
+        kq.innerHTML =('Không có trong từ điển. Nhập lại !');
+      }
+    }
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<h1>Type anthing slowly</h1>
+
+<body>
+<script>
+    let a = new Array() ,
+        n = "" ;
+    a[1] = 'H';
+    a[2] = 'E';
+    a[3] = 'L';
+    a[4] = 'L';
+    a[5] = 'O';
+    a[6] = ' ';
+    a[7] = 'C';
+    a[8] = 'O';
+    a[9] = 'D';
+    a[10] = 'E';
+    a[11] = 'R';
+    a[12] = ' ';
+    a[13] = 'B';
+    a[14] = 'Y';
+    a[15] = ' ';
+    a[16] = 'H';
+    a[17] = 'O';
+    a[18] = 'A';
+    a[19] = 'I';
+    a[20] = ' ';
+    a[21] = 'N';
+    a[22] = 'A';
+    a[23] = 'M';
+
+    function nhap() {
+        t = document.f.txt.value;
+        j = t.length;
+        if (j > 0) {
+            for (var i = 1; i <= j; i++) {
+                n = n + a[i];
+                if (i ==24) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.f.txt.value = n;
+        n = "";
+        setTimeout("nhap()", 1);
+
+    }
+</script>
+
+<form name="f">
+    <textarea cols="40" rows="10" name="txt" onkeydown="nhap()"></textarea>
+</form>
+
+</body>
+</html>
